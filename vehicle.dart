@@ -24,21 +24,22 @@ abstract class Vehicle {
 class Car extends Vehicle {
   int numberOfSeats;
 
-  /**TODO: Implement constructor of car**/
+  Car(String name, double speed, VehicleCategory category, int this.numberOfSeats) : super(name, speed, category);
+
   @override
   String getDetails() {
-    /**TODO: Implement this function**/
+    return "Car:\n Name: $name\n Speed: $speed\n Category: ${category == VehicleCategory.Private ? 'private':'public'}\n NumberOfSeat: $numberOfSeats";
   }
 }
 
 class Bus extends Vehicle {
   int capacity;
 
-  /**TODO: Implement constructor of bus**/
+  Bus(String name, double speed, VehicleCategory category, int this.capacity):super(name, speed, category);
 
   @override
   String getDetails() {
-    /**TODO: Implement this function**/
+    return "Bus:\n Name: $name\n Speed: $speed\n Category: ${category == VehicleCategory.Private ? 'private':'public'}\n Capacity: $capacity";
   }
 }
 
